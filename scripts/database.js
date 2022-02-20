@@ -53,3 +53,11 @@ export const getInteriors = () => {
 export const getTechnology = () => {
     return database.technology.map(tech => ({...tech}))
 }
+
+export const getWheels = () => {
+    return database.wheels.map(wheel => ({...wheel}))
+}
+
+export const getCustomOrders = () => {
+    return database.customOrders.map(order => ({...order}))
+}

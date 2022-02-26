@@ -5,7 +5,7 @@ const technologies = getTechnology()
 document.addEventListener(
     "change",
     (event) => {
-        if (event.target.name === "technology") {
+        if (event.target.id === "tech") {
             setTechnology(parseInt(event.target.value))
         }
     }
@@ -14,11 +14,11 @@ document.addEventListener(
 export const Technologies = () => {
     let html = "<h2>Technologies</h2>"
 
-    html += '<select id="technologies">'
+    html += '<select id="tech">'
     html += '<option value="0">Select a technology package</option>'
 
     const arrayOfOptions = technologies.map( (tech) => {
-            return `option value="${tech.id}">${tech.package}</option>`
+            return `<option value="${tech.id}">${tech.package}</option>`
         }
     )
 

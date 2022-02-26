@@ -5,7 +5,7 @@ const paints = getPaintColors()
 document.addEventListener(
     "change",
     (event) => {
-        if (event.target.name === "paintColors") {
+        if (event.target.id === "paints") {
             setPaint(parseInt(event.target.value))
         }
     }
@@ -18,7 +18,7 @@ export const Paints = () => {
     html += '<option value="0">Select a paint color</option>'
 
     const arrayOfOptions = paints.map( (paint) => {
-            return `option value="${paint.id}">${paint.color}</option>`
+            return `<option value="${paint.id}">${paint.color}</option>`
         }
     )
 

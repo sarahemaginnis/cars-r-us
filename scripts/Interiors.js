@@ -5,7 +5,7 @@ const interiors = getInteriors()
 document.addEventListener(
     "change",
     (event) => {
-        if (event.target.name === "interiors") {
+        if (event.target.id === "interiors") {
             setInterior(parseInt(event.target.value))
         }
     }
@@ -18,7 +18,7 @@ export const Interiors = () => {
     html += '<option value="0">Select an interior</option>'
 
     const arrayOfOptions = interiors.map( (interior) => {
-            return `option value="${interior.id}">${interior.package}</option>`
+            return `<option value="${interior.id}">${interior.package}</option>`
         }
     )
 
